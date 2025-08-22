@@ -1,0 +1,24 @@
+:root {
+  /* Black */
+  --black: #000000; /* header text, chat history, chat bubble, mic icon, history, hamburger menu */
+
+  /* Blues */
+  --blue-900: #03265A; /* header CTA background, robot outline + headphone, hero heading, chatbot heading */
+  --blue-800: #0340A5; /* main CTA background, send button in chatbot */
+  --blue-700: #064CB4; /* headphone of the robot */
+  --blue-600: #2A7EF5; /* text of predefined message */
+
+  /* Light Blues */
+  --blue-300: #CBE3FD; /* eye of robot, shadow, stroke in 2nd CTA, hero banner bubble */
+  --blue-200: #DDEBFF; /* patient chat bubble background */
+  --blue-100: #F1F7FF; /* predefined message capsule background */
+
+  /* Whites */
+  --white: #FFFFFF; /* app background, robot body, header CTA text, "Chat with AI now" CTA */
+  --gray-50: #F8F9FB; /* AI chat bubble background */
+
+  /* Light Grays (Strokes & Borders) */
+  --gray-200: #ECECEC; /* stroke of send message bubble */
+  --gray-300: #DFDDDD; /* stroke of current chat bubble */
+  --gray-400: #D5D5D5; /* separation line in chat history + chat area */
+}

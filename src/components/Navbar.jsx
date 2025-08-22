@@ -9,12 +9,11 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
         <img src="/logo.png" alt="Logo" className="logo-img" />
       </div>
 
-      {/* Hamburger */}
+      {/* Hamburger - stays visible even when menu is open */}
       <button
         className={`hamburger ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -25,13 +24,8 @@ export default function Navbar() {
         <span></span>
       </button>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        {/* Close Button */}
-        <button className="close-btn" onClick={() => setIsOpen(false)}>
-          &times;
-        </button>
-
         <NavLink to="/" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
         <NavLink to="/about" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
         <NavLink to="/contact" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>

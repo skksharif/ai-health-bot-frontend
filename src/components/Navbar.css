@@ -1,12 +1,10 @@
-/* Navbar Styles */
+/* ===== Base Navbar ===== */
 .navbar {
   display: flex;
   justify-content: space-around;
-  gap: 100px;
   align-items: center;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   background: var(--white);
-  overflow-x: hidden;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -16,10 +14,11 @@
   width: 60px;
 }
 
+/* Desktop Nav Links */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
+  gap: 2.5rem;
 }
 
 .nav-link {
@@ -52,27 +51,40 @@
   background: var(--blue-800);
 }
 
-/* ====== Responsive Styles ====== */
+/* ===== Hamburger Menu ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  transition: transform 0.3s ease;
 }
 
 .menu-toggle span {
-  width: 25px;
+  width: 26px;
   height: 3px;
   background: var(--black);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Mobile menu */
-@media (max-width: 1120px) {
+/* Animate hamburger into "X" */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
   .navbar {
     justify-content: space-between;
-    gap: 0;
+    position: sticky;
+    top: 0;
   }
   .nav-links {
     position: absolute;
@@ -80,9 +92,10 @@
     right: 0;
     background: var(--white);
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+    width: 250px;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
   }
@@ -93,5 +106,26 @@
 
   .menu-toggle {
     display: flex;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .logo-img {
+    width: 48px;
+  }
+
+  .nav-links {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .login-btn {
+    width: 100%;
+    text-align: center;
   }
 }

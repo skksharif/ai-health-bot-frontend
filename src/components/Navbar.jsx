@@ -6,9 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   // Close menu when a link is clicked
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+  const handleLinkClick = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
@@ -18,7 +16,10 @@ export default function Navbar() {
       </div>
 
       {/* Hamburger Icon */}
-      <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className={`menu-toggle ${isOpen ? "open" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <span></span>
         <span></span>
         <span></span>

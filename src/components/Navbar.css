@@ -6,6 +6,7 @@
   align-items: center;
   padding: 0.5rem 2rem;
   background: var(--white);
+  overflow-x: hidden;
   position: sticky;
   top: 0;
   z-index: 1000;

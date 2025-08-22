@@ -5,61 +5,31 @@ import "./Navbar.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Close menu when a link is clicked
   const handleLinkClick = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="logo">
         <img src="/logo.png" alt="Logo" className="logo-img" />
       </div>
 
-      {/* Hamburger Icon */}
-      <div
-        className={`menu-toggle ${isOpen ? "open" : ""}`}
+      {/* Hamburger */}
+      <button
+        className={`hamburger ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle Menu"
       >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
-      {/* Nav Links */}
+      {/* Mobile Menu Overlay */}
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          onClick={handleLinkClick}
-        >
-          Home
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          onClick={handleLinkClick}
-        >
-          About
-        </NavLink>
-
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-          onClick={handleLinkClick}
-        >
-          Contact
-        </NavLink>
-
-        <button className="login-btn" onClick={handleLinkClick}>
-          Login
-        </button>
+        <NavLink to="/" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
+        <NavLink to="/about" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
+        <NavLink to="/contact" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
+        <button className="login-btn" onClick={handleLinkClick}>Login</button>
       </div>
     </nav>
   );

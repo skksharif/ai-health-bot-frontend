@@ -22,3 +22,6 @@
   --gray-300: #DFDDDD; /* stroke of current chat bubble */
   --gray-400: #D5D5D5; /* separation line in chat history + chat area */
 }
+body{
+  overflow-x: hidden;
+}

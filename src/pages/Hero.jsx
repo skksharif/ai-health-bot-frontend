@@ -1,7 +1,9 @@
 import React from "react";
 import "./Hero.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+    const navigate = useNavigate();
   return (
     <section className="hero">
       {/* Background Shapes */}
@@ -24,7 +26,9 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Chat with AI Now</button>
+          <button className="btn-primary" onClick={()=>{
+            navigate('/chat-with-ai')
+          }}>Chat with AI</button>
           <button className="btn-secondary">Learn More</button>
         </div>
       </div>

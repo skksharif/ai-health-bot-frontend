@@ -6,7 +6,6 @@
   gap: 2rem;
   flex-wrap: wrap;
   position: relative;
-  overflow-x: hidden;
 }
 
 /* Background Blobs */
@@ -83,6 +82,8 @@
 .hero-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -157,6 +158,9 @@
 
   .hero-subtitle {
     font-size: 1.1rem;
+  }
+  .hero-buttons{
+      justify-content: center;
   }
 }
 

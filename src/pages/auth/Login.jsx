@@ -1,5 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import "./Login.css";
+import { NavLink } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -49,9 +50,9 @@ export default function Login() {
 
           <p className="signup-text">
             New here?{" "}
-            <a href="#" className="signup-link">
+            <NavLink to="/signup" className="signup-link">
               Create an account
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>

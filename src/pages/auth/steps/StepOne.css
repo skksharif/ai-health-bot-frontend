@@ -1,0 +1,226 @@
+/* StepOne.css */
+/* Container */
+.pre-form-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Title & Step Info */
+.pre-form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--blue-900);
+  text-align: left;
+}
+
+.pre-form-step {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Progress bar */
+.pre-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.pre-progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.pre-step-one {
+  width: 20%;
+  background: var(--blue-800);
+}
+
+.pre-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Section */
+.pre-form-section {
+  margin-top: 1rem;
+}
+
+.pre-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.pre-section-header span {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.pre-section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form */
+.pre-step-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.pre-sub-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.8rem 0 0.5rem;
+  color: #444;
+}
+
+/* Rows & Groups */
+.pre-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pre-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 220px;
+}
+
+.pre-form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.pre-form-group input,
+.pre-form-group select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pre-form-group input:focus,
+.pre-form-group select:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 0 3px rgba(76, 175, 239, 0.25);
+}
+
+.pre-full-width {
+  flex: 100%;
+}
+
+/* Sub Group */
+.pre-sub-form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .pre-form-container {
+    padding: 0.8rem;
+  }
+
+  .pre-form-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .pre-section-title {
+    font-size: 1.1rem;
+  }
+
+  .pre-form-row {
+    gap: 0.8rem;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .pre-form-container {
+    padding: 0.6rem;
+  }
+
+  .pre-form-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .pre-form-step {
+    text-align: center;
+  }
+
+  .pre-form-row {
+    flex-direction: column;
+  }
+
+  .pre-form-group {
+    width: 100%;
+  }
+
+  .pre-sub-form-row {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* Small phones (<= 480px) */
+@media (max-width: 480px) {
+  .pre-form-title {
+    font-size: 1.2rem;
+  }
+
+  .pre-section-title {
+    font-size: 1rem;
+  }
+
+  .pre-form-group input,
+  .pre-form-group select {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .pre-form-step {
+    font-size: 0.85rem;
+  }
+}
+
+/* Buttons */
+.pre-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.pre-next{
+  background: var(--blue-800);
+  color: #fff;
+}
+
+.pre-next:hover {
+  background: var(--blue-900);
+}

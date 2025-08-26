@@ -1,0 +1,246 @@
+/* StepThree.css */
+
+/* Container */
+.form-container-three {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Title & Step Info */
+.form-title-three {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--blue-900);
+  text-align: left;
+}
+
+.form-step-three {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Progress bar */
+.progress-bar-three {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progress-fill-three {
+  height: 100%;
+  background: var(--blue-800);
+  transition: width 0.3s ease;
+}
+
+/* Section */
+.three-section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.three-section-header span {
+  font-size: 1.2rem;
+  color: #333;
+}
+.form-section-three {
+  margin-top: 1rem;
+}
+
+.three-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title-three {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Buttons */
+.btn-three {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.back-three {
+  color: #333;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+
+.next-three {
+  background: var(--blue-800);
+  color: #fff;
+}
+
+.next-three:hover {
+  background: var(--blue-900);
+}
+
+/* Form */
+.step-form-three {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.sub-title-three {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.8rem 0 0.5rem;
+  color: #444;
+}
+
+/* Rows & Groups */
+.form-row-three {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group-three {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 220px;
+}
+
+.form-group-three label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group-three input,
+.form-group-three select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group-three input:focus,
+.form-group-three select:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 0 3px rgba(76, 175, 239, 0.25);
+}
+
+.full-width-three {
+  flex: 100%;
+}
+
+/* Checkbox group */
+.checkbox-group-three {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group-three label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.checkbox-group-three input {
+  transform: scale(1.1);
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .form-container-three {
+    padding: 0.8rem;
+  }
+
+  .form-title-three {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .section-title-three {
+    font-size: 1.1rem;
+  }
+
+  .form-row-three {
+    gap: 0.8rem;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .form-container-three {
+    padding: 0.6rem;
+  }
+
+  .form-title-three {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .form-step-three {
+    text-align: center;
+  }
+
+  .three-section {
+    gap: 0.6rem;
+  }
+
+  .form-row-three {
+    flex-direction: column;
+  }
+
+  .form-group-three {
+    width: 100%;
+  }
+
+  .checkbox-group-three {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* Small phones (<= 480px) */
+@media (max-width: 480px) {
+  .form-title-three {
+    font-size: 1.2rem;
+  }
+
+  .section-title-three {
+    font-size: 1rem;
+  }
+
+  .form-group-three input,
+  .form-group-three select {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .form-step-three {
+    font-size: 0.85rem;
+  }
+}

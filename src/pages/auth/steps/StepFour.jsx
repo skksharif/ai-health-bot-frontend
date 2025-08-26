@@ -35,7 +35,7 @@ export default function StepFour({
             <span>
               <RiCapsuleLine />
             </span>
-            <h3 className="section-title-three">Medical History</h3>
+            <h3 className="section-title-three">Medications & Health Status</h3>
           </div>
           <button
             type="button"

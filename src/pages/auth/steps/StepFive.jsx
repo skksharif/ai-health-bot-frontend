@@ -25,7 +25,7 @@ export default function StepFive({
             <span>
               <TbTargetArrow />
             </span>
-            <h3 className="section-title-five">Medical History</h3>
+            <h3 className="section-title-five">Final Step</h3>
           </div>
           <div className="final-submit-btns">
             <button type="button" className="btn-five secondary-five">

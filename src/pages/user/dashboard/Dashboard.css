@@ -1,0 +1,76 @@
+.dash-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dash-top-row,
+.dash-middle-row,
+.dash-bottom-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    /* Allow wrapping on smaller screens */
+}
+
+/* Widths for large screens */
+.ai-health-risks {
+    width: 50%;
+}
+
+.quick-notes {
+    width: 50%;
+}
+
+.current-medication {
+    width: 60%;
+}
+
+.tele-health {
+    width: 40%;
+}
+
+.eprescription {
+    width: 50%;
+}
+
+.drug-delivery {
+    width: 50%;
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 1024px) {
+
+    .dash-top-row,
+    .dash-middle-row,
+    .dash-bottom-row {
+        flex-wrap: wrap;
+    }
+
+    .ai-health-risks,
+    .quick-notes,
+    .current-medication,
+    .tele-health,
+    .eprescription,
+    .drug-delivery {
+        width: 100%;
+    }
+}
+
+/* Further adjustments for mobile */
+@media (max-width: 600px) {
+    .dash-container {
+        padding: 8px;
+    }
+
+    .dash-top-row,
+    .dash-middle-row,
+    .dash-bottom-row {
+        gap: 8px;
+    }
+}

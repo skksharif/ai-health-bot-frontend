@@ -1,8 +1,9 @@
 import { FcGoogle } from "react-icons/fc";
 import "./Login.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const naviagate = useNavigate();
   return (
     <div className="login-container">
       <div className="login-card">
@@ -37,7 +38,9 @@ export default function Login() {
                 Forgot Password?
               </a>
             </div>
-            <button type="submit" className="login-btn">
+            <button type="button" className="login-btn" onClick={()=>{
+              naviagate('/home')
+            }}>
               Log In
             </button>
           </form>

@@ -1,0 +1,157 @@
+/* Main page layout */
+.conf-page {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header steps */
+.conf-header {
+  margin-bottom: 20px;
+}
+.conf-steps {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.conf-step {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #eee;
+  color: #666;
+  font-size: 14px;
+}
+.conf-step.completed {
+  background-color: #4caf50;
+  color: #fff;
+}
+.conf-step.active {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+/* Content layout */
+.conf-content {
+  display: flex;
+  gap: 40px;
+}
+
+/* Left section - doctor info */
+.conf-left {
+  width: 45%;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+}
+.conf-doctor-img {
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+}
+.conf-doctor-name {
+  text-align: center;
+  margin: 10px 0;
+}
+.conf-specialty {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #555;
+}
+.conf-rating {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.conf-clinic, .conf-mode, .conf-phone {
+  margin-bottom: 8px;
+  text-align: center;
+}
+.conf-call-btn {
+  display: block;
+  width: 100%;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.conf-call-btn:hover {
+  background-color: #1976d2;
+}
+
+/* Patient info */
+.conf-patient {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+}
+.conf-patient h4 {
+  margin-bottom: 10px;
+}
+.conf-patient p {
+  margin: 4px 0;
+}
+
+/* Right section - appointment details */
+.conf-right {
+  width: 55%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.conf-title {
+  margin-bottom: 20px;
+}
+.conf-detail-item {
+  margin-bottom: 15px;
+}
+.conf-detail-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+.conf-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.conf-reschedule, .conf-cancel, .conf-add, .conf-directions {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.conf-reschedule {
+  background-color: #2196f3;
+  color: #fff;
+}
+.conf-reschedule:hover {
+  background-color: #1976d2;
+}
+.conf-cancel {
+  background-color: #f44336;
+  color: #fff;
+}
+.conf-cancel:hover {
+  background-color: #d32f2f;
+}
+.conf-add {
+  background-color: #4caf50;
+  color: #fff;
+}
+.conf-add:hover {
+  background-color: #388e3c;
+}
+.conf-directions {
+  background-color: #ff9800;
+  color: #fff;
+}
+.conf-directions:hover {
+  background-color: #f57c00;
+}

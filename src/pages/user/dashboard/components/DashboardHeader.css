@@ -1,0 +1,31 @@
+.dash-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-welcome {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue-900);
+}
+
+.dash-user-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.dash-notification-btn {
+    all: unset;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.dash-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

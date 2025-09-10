@@ -1,0 +1,78 @@
+.dash-bmi {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+
+.bmi-board {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.dash-bmi-graph {
+    width: 50%;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.dash-graph-placeholder {
+    height: 200px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    border-radius: 5px;
+}
+
+.dash-bmi-values {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.bmi-value {
+    text-align: start;
+    width: 120px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 10px;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.bmi-value p {
+    padding: 0 0 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+    .dash-bmi-graph,
+    .dash-bmi-values {
+        width: 100%;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .bmi-board {
+        flex-wrap: wrap;
+    }
+    .dash-bmi {
+        padding: 12px;
+    }
+
+    .bmi-value {
+        width: 100%;
+    }
+
+    .dash-graph-placeholder {
+        height: 150px;
+    }
+}

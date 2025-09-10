@@ -1,0 +1,113 @@
+.dash-assistant {
+
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dash-assistant-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-300);
+    background-color: var(--gray-100);
+    color: var(--blue-900);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dash-assistant-heading span {
+    font-size: 1.4rem;
+}
+
+.dash-assistant-messages {
+    flex: 1;
+    padding: 12px 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #fafafa;
+}
+
+.dash-message {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.dash-message.bot {
+    flex-direction: row;
+}
+
+.dash-message.user {
+    flex-direction: row-reverse;
+}
+
+.dash-assistant-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--blue-800);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-right: 8px;
+}
+
+.dash-message.user .dash-assistant-icon {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.dash-message-text {
+    max-width: 70%;
+    padding: 10px 2px;
+    border-radius: 16px;
+    background-color: var(--bot-bg);
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.dash-message.user .dash-message-text {
+    background-color: var(--user-bg);
+}
+
+.dash-assistant-input {
+    display: flex;
+    margin: 5px;
+    gap: 10px;
+}
+
+.dash-assistant-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 5px;
+}
+
+.dash-assistant-input input::placeholder {
+    color: #aaa;
+}
+
+.dash-assistant-input button {
+    background-color: var(--blue-800);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dash-assistant-input button:hover {
+    background-color: #1565c0;
+}

@@ -1,0 +1,41 @@
+.dash-telehealth {
+    background-color: #fff;
+    padding:13px 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-height: 200px;
+}
+
+
+.dash-telehealth-icon {
+    font-size: 1.2rem;
+}
+
+.dash-telehealth-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dash-telehealth-item:hover {
+    background-color: #f9f9f9;
+}
+
+.dash-service-icon {
+    margin-right: 12px;
+    color: var(--blue-900);
+    font-size: 1.2rem;
+}
+
+.dash-telehealth-item p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}

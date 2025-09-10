@@ -1,0 +1,225 @@
+/* Layout */
+.dts-page {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafc;
+}
+
+/* Header */
+.dts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dts-steps {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  color: #999;
+}
+
+.dts-step.active {
+  color: #1e73e8;
+  font-weight: 600;
+}
+
+.dts-confirm-btn {
+  background: #1e73e8;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dts-confirm-btn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+/* Content Layout */
+.dts-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Doctor Card */
+.dts-doctor-card {
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+}
+
+.dts-doctor-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.dts-type {
+  font-size: 13px;
+  color: #1e73e8;
+  margin-bottom: 6px;
+}
+
+.dts-doctor-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.dts-specialty {
+  font-size: 14px;
+  color: #555;
+}
+
+.dts-rating,
+.dts-distance {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.dts-change-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #fff;
+  color: #1e73e8;
+  border: 1px solid #1e73e8;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Schedule Section */
+.dts-schedule {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+/* View Toggle */
+.dts-view-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dts-view-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dts-view-btn.active {
+  background: #1e73e8;
+  color: #fff;
+  border-color: #1e73e8;
+}
+
+/* Week Selector */
+.dts-week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dts-day {
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  padding: 8px 0;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.dts-day:hover {
+  background: #f0f6ff;
+}
+
+.dts-day.active {
+  background: #1e73e8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dts-date {
+  display: block;
+  margin-top: 4px;
+}
+
+/* Time Slots */
+.dts-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dts-time-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dts-time-btn.active {
+  background: #1e73e8;
+  color: #fff;
+  border-color: #1e73e8;
+}
+
+/* Legend */
+.dts-legend {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #666;
+}
+
+.dts-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.available {
+  background: #1e73e8;
+}
+
+.unavailable {
+  background: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .dts-content {
+    flex-direction: column;
+  }
+
+  .dts-doctor-card {
+    width: 100%;
+  }
+}

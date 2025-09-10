@@ -1,0 +1,37 @@
+.dash-appointment {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.dash-card-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  gap: 5px;
+  color: var(--blue-900);
+}
+.dash-card-title span{
+  font-size: 23px;
+}
+.dash-appointment-details {
+  margin-bottom: 16px;
+  border: 1px solid #777;
+  padding: 7px;
+  border-radius: 5px;
+  color: #777;
+
+}
+.dash-book-btn {
+  background-color: var(--blue-800);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.dash-book-btn:hover {
+  background-color: #1565c0;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DashboardHeader from "./components/DashboardHeader";
 import UpcomingAppointment from "./components/UpcomingAppointment";
 import AIHealthRiskAlerts from "./components/AIHealthRiskAlerts";
@@ -12,6 +12,9 @@ import AnikaMDAssistant from "./components/AnikaMDAssistant";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="dash-container">
       <DashboardHeader />

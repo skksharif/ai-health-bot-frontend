@@ -5,32 +5,42 @@ import { FaRobot } from "react-icons/fa";
 
 const AnikaMDAssistant = () => {
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello, let me know how I can assist you" }
+    { sender: "bot", text: "Hello, let me know how I can assist you" },
   ]);
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef(null);
+  const isFirstRender = useRef(true); // ✅ Flag to skip initial scroll
+
+  // Scroll to bottom whenever a new message is added (except on first render)
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return; // Skip scrolling on initial render
+    }
+
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleSend = () => {
     if (inputValue.trim() !== "") {
       setMessages((prev) => [...prev, { sender: "user", text: inputValue }]);
       setInputValue("");
+
       setTimeout(() => {
         setMessages((prev) => [
           ...prev,
-          { sender: "bot", text: "I'm here to help you!" }
+          { sender: "bot", text: "I'm here to help you!" },
         ]);
       }, 500);
     }
   };
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
   return (
     <div className="dash-assistant">
       <h3 className="dash-assistant-heading">
-        <span><RiRobot2Line /></span>
+        <span>
+          <RiRobot2Line />
+        </span>
         Anika MD Assistant
       </h3>
       <div className="dash-assistant-messages">

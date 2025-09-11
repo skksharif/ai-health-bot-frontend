@@ -1,157 +1,191 @@
-/* Main page layout */
 .conf-page {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
   color: #333;
 }
 
-/* Header steps */
-.conf-header {
-  margin-bottom: 20px;
+/* Banner */
+.conf-banner {
+  text-align: center;
+  margin-bottom: 25px;
 }
-.conf-steps {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+.conf-banner h2 {
+  color: var(--blue-900);
+  font-size: 32px;
+  margin-bottom: 6px;
 }
-.conf-step {
-  padding: 8px 16px;
-  border-radius: 20px;
-  background-color: #eee;
-  color: #666;
+.conf-banner p {
+  color:var(--blue-600);
   font-size: 14px;
 }
-.conf-step.completed {
-  background-color: #4caf50;
-  color: #fff;
-}
-.conf-step.active {
-  background-color: #2196f3;
-  color: #fff;
-}
 
-/* Content layout */
+/* Layout */
 .conf-content {
   display: flex;
-  gap: 40px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Left section - doctor info */
+/* Left Column */
 .conf-left {
-  width: 45%;
-  background-color: #fafafa;
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Doctor card */
+.conf-doctor-card {
+  background: #fff;
+  border: 1px solid #e3e6ea;
   padding: 20px;
   border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 .conf-doctor-img {
-  width: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
 .conf-doctor-name {
-  text-align: center;
-  margin: 10px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0d47a1;
 }
 .conf-specialty {
-  text-align: center;
-  margin-bottom: 10px;
-  color: #555;
+  color: #1976d2;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 .conf-rating {
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 14px;
+  color: #fbc02d;
+  margin-bottom: 6px;
 }
-.conf-clinic, .conf-mode, .conf-phone {
-  margin-bottom: 8px;
-  text-align: center;
+.conf-clinic,
+.conf-mode,
+.conf-phone {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0;
 }
 .conf-call-btn {
-  display: block;
+  margin-top: 12px;
   width: 100%;
-  background-color: #2196f3;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 20px;
+  font-weight: 600;
 }
 .conf-call-btn:hover {
-  background-color: #1976d2;
+  background: #1976d2;
+  color: #fff;
 }
 
 /* Patient info */
 .conf-patient {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  padding: 15px;
 }
 .conf-patient h4 {
+  font-size: 15px;
+  color: #0d47a1;
   margin-bottom: 10px;
 }
-.conf-patient p {
-  margin: 4px 0;
+.conf-patient-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.conf-patient-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* Right section - appointment details */
+/* Right Column */
 .conf-right {
-  width: 55%;
-  background-color: #fff;
+  flex: 1.2;
+  min-width: 320px;
+  background: #fff;
+  border: 1px solid #e3e6ea;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 .conf-title {
-  margin-bottom: 20px;
+  font-size: 17px;
+  margin-bottom: 18px;
 }
+
+/* Detail items */
 .conf-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 15px;
 }
+.conf-icon {
+  font-size: 18px;
+ 
+  margin-top: 2px;
+}
 .conf-detail-item strong {
-  display: block;
-  margin-bottom: 5px;
-}
-.conf-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.conf-reschedule, .conf-cancel, .conf-add, .conf-directions {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
   font-size: 14px;
 }
-.conf-reschedule {
-  background-color: #2196f3;
+.conf-detail-item p {
+  font-size: 13px;
+  color: #444;
+  margin: 0;
+}
+
+/* Action buttons */
+.conf-actions {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.conf-btn {
+  min-width: 45%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.conf-btn.primary {
+  background: #0d47a1;
   color: #fff;
+  border: none;
 }
-.conf-reschedule:hover {
-  background-color: #1976d2;
+.conf-btn.primary:hover {
+  background: #08306b;
 }
-.conf-cancel {
-  background-color: #f44336;
-  color: #fff;
+.conf-btn.secondary {
+  background: #fff;
+  color: #0d47a1;
+  border: 1px solid #0d47a1;
 }
-.conf-cancel:hover {
-  background-color: #d32f2f;
+.conf-btn.secondary:hover {
+  background: #e3f2fd;
 }
-.conf-add {
-  background-color: #4caf50;
-  color: #fff;
-}
-.conf-add:hover {
-  background-color: #388e3c;
-}
-.conf-directions {
-  background-color: #ff9800;
-  color: #fff;
-}
-.conf-directions:hover {
-  background-color: #f57c00;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conf-content {
+    flex-direction: column;
+  }
 }

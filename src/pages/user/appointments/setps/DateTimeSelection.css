@@ -12,20 +12,22 @@
   align-items: center;
   margin-bottom: 20px;
 }
-
-.dts-steps {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-  color: #999;
+.dts-back-btn{
+  padding: 5px;
+  font-size: 24px;
+  cursor: pointer;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+    border-radius: 50%;
 }
-
-.dts-step.active {
-  color: #1e73e8;
-  font-weight: 600;
+.dts-back-btn:hover {
+  color: var(--blue-700);
+ 
 }
 
 .dts-confirm-btn {
+  width: fit-content;
   background: #1e73e8;
   color: #fff;
   padding: 10px 18px;
@@ -55,6 +57,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 20px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .dts-doctor-img {
@@ -106,6 +109,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 20px;
+  min-width: 0; /* Important for responsive flex layout */
 }
 
 /* View Toggle */
@@ -214,12 +218,76 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .dts-content {
     flex-direction: column;
+    gap: 20px;
   }
 
   .dts-doctor-card {
     width: 100%;
+  }
+
+  .dts-schedule {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .dts-view-toggle {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .dts-week {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dts-day {
+    flex: 1 1 30%;
+    margin-bottom: 10px;
+  }
+
+  .dts-times {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dts-doctor-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dts-type {
+    font-size: 12px;
+  }
+
+  .dts-doctor-name {
+    font-size: 14px;
+  }
+
+  .dts-specialty,
+  .dts-rating,
+  .dts-distance {
+    font-size: 12px;
+  }
+
+  .dts-view-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .dts-time-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .dts-legend {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }

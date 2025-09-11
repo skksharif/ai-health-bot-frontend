@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./DateTimeSelection.css";
+import { ChevronLeft } from "lucide";
+import { MdArrowBackIos } from "react-icons/md";
+import StarRating from "../components/StarRating";
 
 const DateTimeSelection = ({ formData, setFormData, nextStep, prevStep }) => {
   const [selectedDate, setSelectedDate] = useState(formData.date || "");
@@ -22,11 +25,7 @@ const DateTimeSelection = ({ formData, setFormData, nextStep, prevStep }) => {
     <div className="dts-page">
       {/* Progress Header */}
       <div className="dts-header">
-        <div className="dts-steps">
-          <span className="dts-step">Select Doctors</span>
-          <span className="dts-step active">Choose date and time</span>
-          <span className="dts-step">Confirmation</span>
-        </div>
+        <span onClick={prevStep} className="dts-back-btn"><MdArrowBackIos/></span>
         <button
           className="dts-confirm-btn"
           disabled={!selectedDate || !selectedTime}
@@ -47,8 +46,8 @@ const DateTimeSelection = ({ formData, setFormData, nextStep, prevStep }) => {
           <p className="dts-type">In-person</p>
           <h3 className="dts-doctor-name">Dr. Joseph McCall</h3>
           <p className="dts-specialty">Pediatrician</p>
-          <p className="dts-rating">⭐ 4.5</p>
-          <p className="dts-distance">📍 1.5 km far from you</p>
+          <p className="dts-rating"><StarRating rating={4.5}/>4.5</p>
+          <p className="dts-distance"> 1.5 km far from you</p>
           <button onClick={prevStep} className="dts-change-btn">
             Change Doctor
           </button>

@@ -1,132 +1,190 @@
-/* Layout */
-.ds-page {
+/* Wrapper */
+.ds-wrapper {
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  font-family: "Segoe UI", sans-serif;
-  background: #f9fafc;
+  gap: 10px;
+  align-items: flex-start;
 }
 
-/* Sidebar */
-.ds-filters {
-  width: 240px;
-  height: fit-content;
+/* Sidebar (default desktop) */
+.ds-sidebar {
+  width: 220px;
   background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
 }
 
+/* Sidebar active (mobile open) */
+.ds-sidebar.active {
+  transform: translateX(0);
+}
+
+/* Overlay (for mobile sidebar) */
+.ds-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+  display: none;
+}
+
+/* Sidebar content */
 .ds-filters-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
 .ds-label {
   display: block;
-  font-size: 14px;
-  margin: 10px 0 5px;
+  font-size: 15px;
+  margin-bottom: 6px;
 }
 
 .ds-input {
   width: 100%;
-  padding: 8px 10px;
+  padding: 8px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-  font-size: 14px;
+  border-radius: 6px;
   margin-bottom: 12px;
-}
-
-.ds-input:focus {
-  border-color: #1e73e8;
-  box-shadow: 0 0 0 2px rgba(30,115,232,0.2);
 }
 
 .ds-radio-group {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .ds-radio-label {
   font-size: 14px;
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Main Content */
-.ds-content {
+/* Main content */
+.ds-main {
   flex: 1;
+  padding: 0 15px;
+  border-left: 1px solid #eee;
+}
+
+.ds-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
 .ds-title {
   font-size: 22px;
-  margin-bottom: 15px;
+  color: #0a3d91;
+}
+
+.ds-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ds-filter-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.ds-notification-btn {
+  all: unset;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.ds-user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
 }
 
 .ds-search-bar {
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  font-size: 14px;
 }
 
-/* Doctor Grid */
+/* Grid layout */
 .ds-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
 }
 
+/* Doctor Card */
 .ds-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 16px;
-  text-align: center;
-  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease;
 }
 
 .ds-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+}
+
+.ds-card-header {
+  display: flex;
+  gap: 10px;
 }
 
 .ds-img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 12px;
+}
+
+.ds-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .ds-name {
   font-size: 16px;
   font-weight: 600;
-  margin: 4px 0;
 }
 
 .ds-specialty {
   font-size: 14px;
   color: #555;
-  margin-bottom: 6px;
 }
 
-.ds-rating,
-.ds-distance {
+.ds-rating {
   font-size: 13px;
-  color: #666;
-  margin: 2px 0;
+  color: #777;
 }
-
+.ds-location{
+  font-size: 12px;
+  color: var(--blue-800);
+}
 .ds-btn {
-  margin-top: 10px;
   width: 100%;
   padding: 10px;
   background: #1e73e8;
@@ -142,9 +200,73 @@
   background: #155ec0;
 }
 
-.ds-no-results {
-  grid-column: 1 / -1;
-  text-align: center;
-  color: #888;
-  font-size: 15px;
+@media (max-width: 768px) {
+  .ds-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .ds-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-width: 280px;
+    border-radius: 0;
+    transform: translateX(-100%);
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+
+  .ds-sidebar.active {
+    transform: translateX(0);
+  }
+
+  .ds-overlay {
+    display: block;
+  }
+
+  .ds-main {
+    width: 100%;
+    border-left: none;
+  }
+
+  .ds-filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ds-main-header {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ds-user-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+
+
+  .ds-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .ds-name {
+    font-size: 14px;
+  }
+
+  .ds-specialty,
+  .ds-rating {
+    font-size: 12px;
+  }
 }

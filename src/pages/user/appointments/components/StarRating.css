@@ -1,0 +1,17 @@
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 14px;
+  color: #f5c518;
+}
+
+.star.half {
+  color: #f5c518; /* you can adjust color for half stars if needed */
+}
+
+.star.empty {
+  color: #ddd;
+}

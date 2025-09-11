@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { MdMenu, MdClose } from "react-icons/md"; // Import menu and close icons
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -14,15 +15,13 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="logo-img" />
       </div>
 
-      {/* Hamburger Menu */}
+      {/* Hamburger Icon */}
       <button
-        className={`hamburger ${isOpen ? "open" : ""}`}
+        className="hamburger"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        {isOpen ? <MdClose size={28} /> : <MdMenu size={28} />}
       </button>
 
       {/* Navigation Links */}

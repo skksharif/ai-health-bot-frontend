@@ -1,12 +1,15 @@
+
+
+/* Navbar container */
 .navbar {
   display: flex;
-  justify-content: space-around; /* space for logo and hamburger */
+  justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
   background: var(--white);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 /* Logo */
@@ -15,24 +18,26 @@
   max-width: 100%;
 }
 
-/* Desktop nav-links */
+/* Navigation links */
 .nav-links {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-/* Nav links */
+/* Individual link styles */
 .nav-link {
   text-decoration: none;
   color: var(--black);
   font-weight: 500;
   transition: 0.2s;
 }
+
 .nav-link.active {
   color: var(--blue-900);
   font-weight: 600;
 }
+
 .nav-link:hover {
   color: var(--blue-600);
 }
@@ -47,13 +52,14 @@
   cursor: pointer;
   transition: 0.2s;
 }
+
 .login-btn:hover {
   background: var(--blue-600);
 }
 
-/* Hamburger - always visible in mobile */
+/* Hamburger menu */
 .hamburger {
-  display: none;
+  display: none !important;
   flex-direction: column;
   justify-content: space-between;
   width: 26px;
@@ -61,35 +67,34 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1001; /* above menu */
+  z-index: 1001;
 }
 
 .hamburger span {
   display: block;
   height: 3px;
-  background: var(--black);
+  background: #000000; /* Hardcoded for Safari fallback */
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Animate hamburger to X when open */
+/* Animate hamburger to X */
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(11px);
+  transform: rotate(45deg) translateY(8px);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-11px);
+  transform: rotate(-45deg) translateY(-8px);
 }
 
-/* ===== Mobile Styles ===== */
+/* Mobile menu */
 @media (max-width: 992px) {
-  .navbar {
-    justify-content: space-between; /* space for logo and hamburger */
-  }
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-links {
@@ -114,18 +119,21 @@
   }
 }
 
-/* Extra small phones */
+/* Extra small screens */
 @media (max-width: 480px) {
   .navbar {
     padding: 0.6rem 1rem;
   }
+
   .logo-img {
     width: 48px;
   }
+
   .nav-links {
     padding: 2rem 1.5rem;
     max-width: 250px;
   }
+
   .login-btn {
     width: 100%;
     text-align: center;

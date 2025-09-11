@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
   const handleLinkClick = () => setIsOpen(false);
 
@@ -14,7 +14,7 @@ export default function Navbar() {
         <img src="/logo.png" alt="Logo" className="logo-img" />
       </div>
 
-      {/* Hamburger - stays visible even when menu is open */}
+      {/* Hamburger Menu */}
       <button
         className={`hamburger ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -25,15 +25,44 @@ export default function Navbar() {
         <span></span>
       </button>
 
-      {/* Mobile Menu */}
+      {/* Navigation Links */}
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <NavLink to="/" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink>
-        <NavLink to="/about" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>About</NavLink>
-        <NavLink to="/contact" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink>
-        <button className="login-btn" onClick={()=>{
+        <NavLink
+          to="/"
+          onClick={handleLinkClick}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          onClick={handleLinkClick}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/contact"
+          onClick={handleLinkClick}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Contact
+        </NavLink>
+        <button
+          className="login-btn"
+          onClick={() => {
             handleLinkClick();
-            navigate('/login');
-        }}>Login</button>
+            navigate("/login");
+          }}
+        >
+          Login
+        </button>
       </div>
     </nav>
   );

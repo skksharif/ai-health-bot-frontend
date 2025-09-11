@@ -1,4 +1,10 @@
 
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --blue-900: #003366;
+  --blue-600: #3366cc;
+}
 
 /* Navbar container */
 .navbar {

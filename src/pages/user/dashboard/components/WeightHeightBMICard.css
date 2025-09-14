@@ -18,14 +18,35 @@
     margin-bottom: 12px;
 }
 
-.dash-graph-placeholder {
-    height: 200px;
-    background-color: #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    border-radius: 5px;
+
+.dash-card-title {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+
+.dash-bmi-values {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.bmi-value {
+  text-align: center;
+}
+
+.bmi-value p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.bmi-value strong {
+  font-size: 1.1rem;
+  color: #222;
 }
 
 .dash-bmi-values {

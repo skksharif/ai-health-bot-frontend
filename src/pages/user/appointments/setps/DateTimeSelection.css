@@ -1,40 +1,41 @@
-/* Layout */
+/* ===================== Layout ===================== */
 .dts-page {
   padding: 20px;
   font-family: "Segoe UI", sans-serif;
   background: #f9fafc;
 }
 
-/* Header */
 .dts-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-.dts-back-btn{
+
+.dts-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   font-size: 24px;
+  border-radius: 50%;
   cursor: pointer;
-   display: flex;
-  justify-content: center;
-  align-items: center;
-    border-radius: 50%;
+  transition: color 0.2s;
 }
+
 .dts-back-btn:hover {
-  color: var(--blue-700);
- 
+  color: #1e73e8;
 }
 
 .dts-confirm-btn {
-  width: fit-content;
-  background: #1e73e8;
-  color: #fff;
   padding: 10px 18px;
   border: none;
   border-radius: 8px;
   font-weight: 600;
+  background: #1e73e8;
+  color: #fff;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .dts-confirm-btn:disabled {
@@ -42,19 +43,19 @@
   cursor: not-allowed;
 }
 
-/* Content Layout */
+/* ===================== Content Layout ===================== */
 .dts-content {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Doctor Card */
+/* ===================== Doctor Card ===================== */
 .dts-doctor-card {
   width: 250px;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
   text-align: center;
   flex-shrink: 0;
@@ -100,16 +101,22 @@
   border: 1px solid #1e73e8;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
-/* Schedule Section */
+.dts-change-btn:hover {
+  background: #1e73e8;
+  color: #fff;
+}
+
+/* ===================== Schedule Section ===================== */
 .dts-schedule {
   flex: 1;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
-  min-width: 0; /* Important for responsive flex layout */
+  min-width: 0;
 }
 
 /* View Toggle */
@@ -126,6 +133,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.2s;
 }
 
 .dts-view-btn.active {
@@ -134,7 +142,19 @@
   border-color: #1e73e8;
 }
 
-/* Week Selector */
+/* ===================== Week Selector ===================== */
+.dts-week-header {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.dts-week-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .dts-week {
   display: flex;
   justify-content: space-between;
@@ -144,13 +164,13 @@
 .dts-day {
   text-align: center;
   flex: 1;
-  cursor: pointer;
   padding: 8px 0;
   border-radius: 8px;
-  transition: background 0.2s;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
-.dts-day:hover {
+.dts-day:hover:not(.disabled) {
   background: #f0f6ff;
 }
 
@@ -160,17 +180,37 @@
   font-weight: 600;
 }
 
+.dts-day.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .dts-date {
   display: block;
   margin-top: 4px;
 }
 
-/* Time Slots */
+/* ===================== Month Selector ===================== */
+.custom-month {
+  width: 100%;
+}
+
+.custom-month .rdp-day_disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+/* ===================== Time Slots ===================== */
+.dts-time-slots {
+  margin: 10px 0;
+}
+
 .dts-times {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 
 .dts-time-btn {
@@ -180,6 +220,7 @@
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .dts-time-btn.active {
@@ -188,7 +229,11 @@
   border-color: #1e73e8;
 }
 
-/* Legend */
+.dts-time-btn:hover:not(.active) {
+  background: #f0f6ff;
+}
+
+/* ===================== Legend ===================== */
 .dts-legend {
   display: flex;
   gap: 20px;
@@ -217,30 +262,20 @@
   background: #ccc;
 }
 
-/* Mobile Responsive */
+/* ===================== Responsive ===================== */
 @media (max-width: 1024px) {
   .dts-content {
     flex-direction: column;
     gap: 20px;
   }
 
-  .dts-doctor-card {
-    width: 100%;
-  }
-
+  .dts-doctor-card,
   .dts-schedule {
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-
-
-  .dts-view-toggle {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
   .dts-week {
     flex-wrap: wrap;
     gap: 10px;
@@ -290,4 +325,105 @@
     flex-wrap: wrap;
     gap: 10px;
   }
+}
+
+/* ===================== Week Selector ===================== */
+.dts-week-wrapper {
+  margin-bottom: 20px;
+}
+
+.dts-week-header h4 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dts-week-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.week-arrow {
+  all: unset;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.week-arrow:hover {
+  background: #f0f6ff;
+  transform: scale(1.1);
+}
+
+.dts-week {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.dts-day {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.dts-day:hover:not(.disabled) {
+  background: #f0f6ff;
+  transform: translateY(-2px);
+}
+
+.dts-day.active {
+  background: #1e73e8;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dts-day.today {
+  border: 2px solid #1e73e8;
+}
+
+.dts-day.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.dts-day-name {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.dts-date {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===================== Month Selector ===================== */
+
+.custom-month {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.custom-month .rdp-day_disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.custom-month .rdp-day_today {
+  border: 2px solid #1e73e8;
 }

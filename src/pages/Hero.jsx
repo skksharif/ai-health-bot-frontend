@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="hero-buttons">
           <button className="btn-primary" onClick={()=>{
             navigate('/chat-with-ai')
-          }}>Chat with AI</button>
+          }}>Chat with Anika MD</button>
           <button className="btn-secondary">Learn More</button>
         </div>
       </div>

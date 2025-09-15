@@ -8,10 +8,10 @@ import CurrentMedications from "./components/CurrentMedications";
 import TelehealthAccess from "./components/TelehealthAccess";
 import EPrescription from "./components/EPrescription";
 import DrugDelivery from "./components/DrugDelivery";
-import AnikaMDAssistant from "./components/AnikaMDAssistant";
-import "./Dashboard.css";
+import AnikaMDAssistant from "../../../components/AnikaMDAssistant";
+import "./UserDashboard.css";
 
-const Dashboard = () => {
+const UserDashboard = () => {
     useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -50,4 +50,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default UserDashboard;

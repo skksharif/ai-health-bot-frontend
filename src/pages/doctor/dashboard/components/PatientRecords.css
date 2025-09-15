@@ -1,0 +1,113 @@
+.pr-records-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pr-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pr-records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pr-record-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #f9fbff;
+    gap: 10px;
+}
+
+.pr-record-time {
+    font-weight: bold;
+    color: #444;
+    flex: 0 0 100px;
+}
+
+.pr-record-report {
+    color: #333;
+    font-size: 15px;
+    flex: 1 1 auto;
+}
+
+.pr-record-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex: 0 0 120px;
+}
+
+.pr-action-btn {
+    border: none;
+    background: #eef3fc;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pr-action-btn:hover {
+    background: #d8e3f7;
+}
+
+.pr-download, .pr-message, .pr-call {
+    color: #2a3d66;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pr-record-item {
+        flex-wrap: wrap;
+    }
+
+    .pr-record-time {
+        flex: 1 1 100%;
+    }
+
+    .pr-record-report {
+        flex: 1 1 100%;
+    }
+
+    .pr-record-actions {
+        flex: 1 1 100%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .pr-title {
+        font-size: 1.1rem;
+    }
+
+    .pr-record-time {
+        font-size: 13px;
+    }
+
+    .pr-record-report {
+        font-size: 14px;
+    }
+
+    .pr-action-btn {
+        padding: 6px;
+        font-size: 13px;
+    }
+}

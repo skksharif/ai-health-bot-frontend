@@ -1,0 +1,43 @@
+.cn-compliance-notice {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+
+.cn-notice-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cn-notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.cn-notice-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+.cn-notice-item:last-child {
+    border-bottom: none;
+}
+
+.cn-bullet {
+    color: #f39c12;
+    font-weight: bold;
+}

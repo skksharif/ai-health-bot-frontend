@@ -16,11 +16,12 @@
   border: 1px solid #eee;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 /* Sidebar active (mobile open) */
 .ds-sidebar.active {
+
   transform: translateX(0);
 }
 
@@ -180,10 +181,12 @@
   font-size: 13px;
   color: #777;
 }
-.ds-location{
+
+.ds-location {
   font-size: 12px;
   color: var(--blue-800);
 }
+
 .ds-btn {
   width: 100%;
   padding: 10px;

@@ -1,0 +1,106 @@
+.sc-calendar-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto; /* Enables horizontal scroll if needed */
+}
+
+.sc-calendar-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.sc-icon {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sc-calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: auto;
+    min-width: 600px; /* Ensure table is scrollable on small screens */
+}
+
+.sc-header-cell {
+    background: #eef3fc;
+    color: #2a3d66;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevent headers from wrapping */
+}
+
+.sc-day-cell {
+    background: #f1f4f8;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevent wrapping of content */
+}
+
+.sc-time-cell {
+    background: #f9fcff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 100px;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.sc-time-cell.sc-booked {
+    background: #dce9ff;
+    border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sc-calendar-title {
+        font-size: 1.1rem;
+    }
+
+    .sc-icon {
+        font-size: 1.3rem;
+    }
+
+    .sc-calendar-table {
+        min-width: 100%; /* Allow it to shrink but enable scroll if necessary */
+    }
+
+    .sc-header-cell,
+    .sc-day-cell,
+    .sc-time-cell {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sc-calendar-title {
+        font-size: 1rem;
+        gap: 4px;
+    }
+
+    .sc-icon {
+        font-size: 1.2rem;
+    }
+
+    .sc-header-cell,
+    .sc-day-cell,
+    .sc-time-cell {
+        padding: 4px;
+        font-size: 0.8rem;
+    }
+}

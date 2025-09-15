@@ -1,0 +1,69 @@
+.pn-network-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+.pn-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+.pn-doctor-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pn-doctor-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-top: 1px solid #eee;
+}
+
+.pn-doctor-card:first-child {
+    border-top: none;
+}
+
+.pn-doctor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.pn-doctor-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.pn-doctor-specialty {
+    font-size: 13px;
+    color: #777;
+}
+
+.pn-btn-chat {
+    padding: 6px 12px;
+    border: 1px solid #0056d2;
+    background: #fff;
+    border-radius: 6px;
+    color: #0056d2;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pn-btn-chat:hover {
+    background: #f0f6ff;
+}

@@ -1,0 +1,85 @@
+.cp-prescription-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+.cp-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blue-900);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cp-prescription-card {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 14px;
+    background: #fafafa;
+}
+
+.cp-patient-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cp-medicine-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.cp-medicine-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 14px;
+}
+
+.cp-dose {
+    font-weight: 500;
+}
+
+.cp-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cp-btn-outline {
+    flex: 1;
+    padding: 6px 8px;
+    border: 1px solid #007bff;
+    background: #fff;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.cp-btn-outline:hover {
+    background: #f0f6ff;
+}
+
+.cp-btn-primary {
+    width: 100%;
+    padding: 10px;
+    background: #0056d2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cp-btn-primary:hover {
+    background: #0041a8;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import DashboardHeader from "./components/DashboardHeader";
 import UpcomingAppointment from "./components/UpcomingAppointment";
 import AIHealthRiskAlerts from "./components/AIHealthRiskAlerts";

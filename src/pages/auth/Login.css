@@ -173,6 +173,7 @@
     flex-direction: column-reverse;
   }
 }
+
 /* Responsive: Mobile */
 @media (max-width: 768px) {
 
@@ -183,4 +184,43 @@
   .login-form-section {
     padding: 1.5rem;
   }
+}
+
+/* Existing styles remain unchanged... */
+
+/* Tabs */
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.tab-btn {
+  all: unset;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #ffffff;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+}
+.tab-btn:first-child {
+  border-radius: 8px 0 0 8px;
+}
+.tab-btn:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.tab-btn.active {
+  background-color: #0052cc;
+  color: #fff;
+  border-color: #0052cc;
+}
+
+.tab-btn:hover:not(.active) {
+  background-color: #e6e6e6;
 }

@@ -8,7 +8,7 @@ import StepThree from "./steps/StepThree";
 import StepFour from "./steps/StepFour";
 import StepFive from "./steps/StepFive";
 
-export default function Signup() {
+export default function PatientSignup() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",

@@ -12,6 +12,8 @@ import Dashboard from "./pages/user/dashboard/UserDashboard";
 import UserDashboard from "./pages/user/dashboard/UserDashboard";
 import DoctorDashboard from "./pages/doctor/dashboard/DoctorDashboard";
 import DoctorSignup from "./pages/auth/doctor-signup/DoctorSignup";
+import DoctorProfile from "./pages/profiles/DoctorProfile";
+import MedicalRecords from "./pages/doctor/medical-records/MedicalRecords";
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
           <Route path="/doctor-signup" element={<DoctorSignup />}/>
           <Route path="/patient-dashboard/*" element={<UserDashboard/>}/>
           <Route path="/book-appointment" element={<AppointmentBooking/>}/>
+          <Route path="/medical-records" element={<MedicalRecords/>}/>
+          <Route path="/doctor-profile/:id" element={<DoctorProfile />}/>
           <Route path="/doctor-dashboard/*" element={<DoctorDashboard/>}/>
           <Route path="*" element={<h1>404 Not Found</h1>} />
 

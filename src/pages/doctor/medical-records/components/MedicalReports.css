@@ -1,0 +1,162 @@
+/* Grid Layout */
+.medicalreports-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Report Section */
+.medicalreports-report {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.medicalreports-report-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.medicalreports-report-icon {
+  color: #004aad;
+  font-size: 18px;
+}
+
+.medicalreports-report-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.medicalreports-filter {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Report List */
+.medicalreports-report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.medicalreports-report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8faff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.medicalreports-report-test {
+  font-weight: 500;
+}
+
+.medicalreports-report-doctor {
+  font-size: 12px;
+  color: #666;
+}
+
+.medicalreports-report-status {
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* Report Actions */
+.medicalreports-report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.medicalreports-expand-btn {
+  border: 1px solid #004aad;
+  background: transparent;
+  color: #004aad;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.medicalreports-upload-btn {
+  background: #004aad;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 2;
+}
+
+/* Quick Notes Section */
+.medicalreports-notes {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.medicalreports-notes-header {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.medicalreports-notes-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+.medicalreports-notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medicalreports-note-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f8faff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.medicalreports-note-time {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .medicalreports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicalreports-report-actions {
+    flex-direction: column;
+  }
+}

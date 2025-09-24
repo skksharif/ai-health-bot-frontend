@@ -4,6 +4,7 @@ import "./DoctorSelection.css";
 import { MdOutlineNotifications } from "react-icons/md";
 import { FiFilter } from "react-icons/fi"; // filter icon
 import StarRating from "../components/StarRating";
+import { NavLink } from "react-router-dom";
 
 const doctorsData = [
   {
@@ -185,17 +186,27 @@ const DoctorSelection = ({ formData, setFormData, nextStep }) => {
         <div className="ds-grid">
           {filteredDoctors.map((doctor) => (
             <div key={doctor.id} className="ds-card">
-              <div className="ds-card-header">
-                <img src={doctor.image} alt={doctor.name} className="ds-img" />
-                <div className="ds-info">
-                  <h3 className="ds-name">{doctor.name}</h3>
-                  <p className="ds-specialty">{doctor.specialty}</p>
-                  <p className="ds-rating">
-                    <StarRating rating={doctor.rating} />{doctor.rating} 
-                  </p>
-                  <p className="ds-location"> {doctor.distance} far from you</p>
+              <NavLink to='/doctor-profile/${doctor.id}'>
+                <div className="ds-card-header">
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="ds-img"
+                  />
+                  <div className="ds-info">
+                    <h3 className="ds-name">{doctor.name}</h3>
+                    <p className="ds-specialty">{doctor.specialty}</p>
+                    <p className="ds-rating">
+                      <StarRating rating={doctor.rating} />
+                      {doctor.rating}
+                    </p>
+                    <p className="ds-location">
+                      {" "}
+                      {doctor.distance} far from you
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
               <button className="ds-btn" onClick={() => handleSelect(doctor)}>
                 Book Appointment
               </button>
